@@ -1,0 +1,41 @@
+package ExamPreparation;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Scanner;
+
+public class taxyCars {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String [] taxyCars = scanner.nextLine().split(">>");
+        int money =0;
+        for (int i = 0; i <taxyCars.length ; i++) {
+           String com = taxyCars[i];
+           String [] sex = com.split(" ");
+
+                switch (sex[0]){
+
+                    case "ford":
+                    int moneys=   Integer.parseInt(sex[1])*50;
+                    money=money +moneys;
+                        break;
+                    case "galaxy":
+                        moneys= Integer.parseInt(sex[1])*80;
+                        money=money +moneys;
+                        break;
+                    case "shef" :
+                        moneys = Integer.parseInt(sex[1])*100;
+                        money=money +moneys;
+                        break;
+                    case "sex" :
+                        moneys= Integer.parseInt(sex[1])*120;
+                        money=money +moneys;
+                        break;
+
+            }
+            System.out.println(taxyCars[i]);
+
+        } System.out.println(money);
+    }
+}
